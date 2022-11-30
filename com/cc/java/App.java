@@ -6,6 +6,7 @@ public class App {
         HoneyBee d = new Drone();
         HoneyBee q = new Queen();
         HoneyBee s = new Security();
+        Security s2 = new Security();       // wenn eine Subklasse eine eigene Methode hat ausserhalb der abstrakten Struktur, dann müsste man die Objekte auch direkt ansprechen
 
         Out.o( Out.c( "#y" ) + Out.l( "Bees" ) );
             Out.o( Out.t( 1 ) + d.j() );
@@ -18,6 +19,9 @@ public class App {
             Out.o( Out.t( 1 ) + w.f() );
             Out.o( Out.t( 1 ) + s.f() );
             Out.o( Out.t( 1 ) + q.f() );
+
+        Out.o( Out.n() + Out.c( "#y" ) + Out.l( "Other jobs" ) );
+            Out.o( Out.t( 1 ) + s2.t() );
 
         // Ansprechen der Pseudo Klasse ist dank abstract nicht mehr möglich
             // Out.o( Out.n() + Out.c( "#y" ) + Out.l() );
